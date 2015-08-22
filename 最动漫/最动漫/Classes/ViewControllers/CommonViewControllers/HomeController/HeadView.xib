@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="BKU-oM-9PX" customClass="HeadView">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Oa-Ve-S8Z">
+                    <rect key="frame" x="535" y="2" width="60" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="3Ra-ER-k2Y"/>
+                        <constraint firstAttribute="height" constant="30" id="KRt-cZ-66s"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                    <state key="normal" title="查看更多">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="didClickNext:" destination="BKU-oM-9PX" eventType="touchUpInside" id="zVC-f7-3VX"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pds-yF-2sX">
+                    <rect key="frame" x="5" y="9" width="4" height="16"/>
+                    <color key="backgroundColor" red="1" green="0.88781216172115052" blue="0.15208248256131107" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="I3l-9I-nha"/>
+                        <constraint firstAttribute="width" constant="4" id="m8j-RR-5hv"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="首页" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8s-sa-8Dl">
+                    <rect key="frame" x="14" y="2" width="200" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="SI8-ag-noe"/>
+                        <constraint firstAttribute="height" constant="30" id="q7t-iH-EVV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="W8s-sa-8Dl" firstAttribute="top" secondItem="BKU-oM-9PX" secondAttribute="top" constant="2" id="3z1-A3-bvB"/>
+                <constraint firstItem="Pds-yF-2sX" firstAttribute="leading" secondItem="BKU-oM-9PX" secondAttribute="leading" constant="5" id="Ej4-Tf-KIW"/>
+                <constraint firstItem="Pds-yF-2sX" firstAttribute="top" secondItem="BKU-oM-9PX" secondAttribute="top" constant="5" id="UDO-Bh-7Rh"/>
+                <constraint firstAttribute="trailing" secondItem="5Oa-Ve-S8Z" secondAttribute="trailing" constant="5" id="dUd-Wg-KmU"/>
+                <constraint firstItem="W8s-sa-8Dl" firstAttribute="leading" secondItem="Pds-yF-2sX" secondAttribute="trailing" constant="5" id="ga4-Y6-zYb"/>
+                <constraint firstItem="W8s-sa-8Dl" firstAttribute="leading" secondItem="BKU-oM-9PX" secondAttribute="leading" constant="2" id="iFV-6n-vfD"/>
+                <constraint firstItem="Pds-yF-2sX" firstAttribute="top" secondItem="BKU-oM-9PX" secondAttribute="top" constant="9" id="mD8-dU-KDM"/>
+                <constraint firstItem="5Oa-Ve-S8Z" firstAttribute="top" secondItem="BKU-oM-9PX" secondAttribute="top" constant="2" id="ryM-Cr-unX"/>
+                <constraint firstItem="Pds-yF-2sX" firstAttribute="top" secondItem="W8s-sa-8Dl" secondAttribute="top" id="wNq-Hy-nxx"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="UDO-Bh-7Rh"/>
+                    <exclude reference="wNq-Hy-nxx"/>
+                    <exclude reference="iFV-6n-vfD"/>
+                </mask>
+            </variation>
+            <connections>
+                <outlet property="descLable" destination="W8s-sa-8Dl" id="1TY-o6-ucL"/>
+            </connections>
+            <point key="canvasLocation" x="281" y="-106"/>
+        </view>
+    </objects>
+</document>

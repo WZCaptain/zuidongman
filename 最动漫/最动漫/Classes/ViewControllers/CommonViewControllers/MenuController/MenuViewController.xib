@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController">
+            <connections>
+                <outlet property="subView" destination="JMk-4e-ZcH" id="ujD-sG-NHH"/>
+                <outlet property="tableView" destination="5iV-Ab-W97" id="DGW-1C-YuF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="5iV-Ab-W97">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JMk-4e-ZcH">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="250" id="qtu-Xy-Ah8"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="qtu-Xy-Ah8"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="qtu-Xy-Ah8"/>
+                        </mask>
+                    </variation>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="5iV-Ab-W97" secondAttribute="bottom" id="AAy-7z-Ppk"/>
+                <constraint firstAttribute="trailing" secondItem="5iV-Ab-W97" secondAttribute="trailing" id="QCe-LF-pcl"/>
+                <constraint firstItem="5iV-Ab-W97" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="RSM-3O-MfM"/>
+                <constraint firstAttribute="trailing" secondItem="JMk-4e-ZcH" secondAttribute="trailing" constant="20" id="Tae-Fb-cBv"/>
+                <constraint firstItem="5iV-Ab-W97" firstAttribute="top" secondItem="JMk-4e-ZcH" secondAttribute="bottom" id="XeO-lD-myY"/>
+                <constraint firstItem="JMk-4e-ZcH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="oFr-bD-Ccq"/>
+                <constraint firstItem="JMk-4e-ZcH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="vm1-p3-A2W"/>
+            </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="5iV-Ab-W97"/>
+                    <exclude reference="JMk-4e-ZcH"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="AAy-7z-Ppk"/>
+                    <exclude reference="QCe-LF-pcl"/>
+                    <exclude reference="RSM-3O-MfM"/>
+                    <exclude reference="XeO-lD-myY"/>
+                    <exclude reference="Tae-Fb-cBv"/>
+                    <exclude reference="oFr-bD-Ccq"/>
+                    <exclude reference="vm1-p3-A2W"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="subviews">
+                    <include reference="5iV-Ab-W97"/>
+                    <include reference="JMk-4e-ZcH"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="AAy-7z-Ppk"/>
+                    <include reference="QCe-LF-pcl"/>
+                    <include reference="RSM-3O-MfM"/>
+                    <include reference="XeO-lD-myY"/>
+                    <include reference="Tae-Fb-cBv"/>
+                    <include reference="oFr-bD-Ccq"/>
+                    <include reference="vm1-p3-A2W"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+</document>
