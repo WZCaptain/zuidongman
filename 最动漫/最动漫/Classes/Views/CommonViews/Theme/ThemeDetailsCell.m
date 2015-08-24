@@ -47,5 +47,6 @@
 - (IBAction)attentionBtn:(UIButton *)sender {
     
     [self.attentionBtn setBackgroundImage:[UIImage imageNamed:@"favorites_btn_icon_big@2x.png"] forState:UIControlStateNormal];
+//    self.attentionBtn.hidden = YES;
 }
 @end

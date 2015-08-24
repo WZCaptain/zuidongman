@@ -18,16 +18,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *likeCountLable;
 @property (weak, nonatomic) IBOutlet UILabel *shareCountLable;
 @property (weak, nonatomic) IBOutlet UILabel *commentsLable;
-@property (weak, nonatomic) IBOutlet UILabel *topicLable;
-
-
+@property (weak, nonatomic) IBOutlet UILabel *partTitle;
 
 @end
 
-
 @implementation RecommendTableViewCell
-
-
 
 - (void)awakeFromNib {
     // Initialization code
@@ -47,7 +42,7 @@
 {
     RecommendTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier ];
     if (!cell) {
-        cell = [[RecommendTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];;
+        cell = [[RecommendTableViewCell alloc]initWithStyle:UITableViewStyleDefault reuseIdentifier:identifier];;
     }
     // 设置点击cell为透明色
     UIView *selectedView = [[UIView alloc]init];
@@ -62,7 +57,7 @@
     _recommendModel = recommendModel;
     self.nicknameLable.text = recommendModel.nickname;
     self.titleLable.text = recommendModel.title;
-    
+    self.partTitle.text = recommendModel.partTitle;
     self.shareCountLable.text = [NSString stringWithFormat:@"%@",recommendModel.shared_count];
     self.commentsLable.text = [NSString stringWithFormat:@"%@",recommendModel.comments_count];
     self.likeCountLable.text = [NSString stringWithFormat:@"%@",recommendModel.likes_count];
@@ -72,5 +67,8 @@
     
 }
 
+- (IBAction)click:(id)sender {
+    NSLog(@"你点击了");
+}
 
 @end

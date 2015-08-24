@@ -48,7 +48,7 @@
 {
     // 列表界面
     ListTableViewController *listController = [[ListTableViewController alloc]init];
-    [self setupChildViewController:listController image:[UIImage imageNamed:@"tabbar_home"] selectedImage:[UIImage imageWithOriginaName:@"tabbar_home_selected"] title:@"看吧"];
+    [self setupChildViewController:listController image:[UIImage imageNamed:@"search"] selectedImage:[UIImage imageWithOriginaName:@"search_hov"] title:@"看吧"];
   
     // 主题界面
     ThemeViewController *themeContorller = [[ThemeViewController alloc]init];
@@ -56,7 +56,7 @@
     
     // 发现界面
     SelectionTableViewController *selectionController = [[SelectionTableViewController alloc]init];
-    [self setupChildViewController:selectionController image:[UIImage imageNamed:@"share"] selectedImage:nil title:@"漫画库"];
+    [self setupChildViewController:selectionController image:[UIImage imageNamed:@"recommend"] selectedImage:[UIImage imageWithOriginaName:@"recommend_hov"] title:@"漫画库"];
     
     // 个人界面
     UserViewController *userController = [[UserViewController alloc]init];

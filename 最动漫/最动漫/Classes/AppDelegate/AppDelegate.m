@@ -30,7 +30,7 @@
     KFTabBarController *mainController = [[KFTabBarController alloc]init];
     
     SliderMenu *slideMenu = [[SliderMenu alloc]initWithContentController:mainController menuController:menuViewController];
-    [slideMenu setBackGroundImage:[UIImage imageNamed:@"1.jpg"]];
+//    [slideMenu setBackGroundImage:[UIImage imageNamed:@"weixin"]];
     self.window.rootViewController = slideMenu;
     return YES;
 }

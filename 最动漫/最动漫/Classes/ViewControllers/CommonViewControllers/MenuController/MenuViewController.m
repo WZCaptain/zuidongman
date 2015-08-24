@@ -27,6 +27,12 @@
 
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     // Do any additional setup after loading the view from its nib.
+    
+//    self.subView.backgroundColor = [UIColor blackColor];
+    
+    UIImageView *backgroundView = [[UIImageView alloc]init];
+    backgroundView.image = [UIImage imageNamed:@"ag_background"];
+    self.tableView.backgroundView = backgroundView;
 }
 
 // 懒加载
@@ -39,7 +45,7 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -47,6 +53,7 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    cell.backgroundColor = [UIColor clearColor];
     cell.textLabel.text = self.munesArray[indexPath.row];
     return cell;
 }
@@ -56,6 +63,22 @@
     UIViewController *VC = [[UIViewController alloc]init];
     VC.view.backgroundColor = [UIColor colorWithHue:randomHue saturation:1.0 brightness:1.0 alpha:1.0];
     UIViewController *contentController = [[UINavigationController alloc]initWithRootViewController:VC];
+    switch (indexPath.row) {
+        case 0:
+            
+            break;
+        case 1:
+            
+            break;
+        case 2:
+            
+            break;
+        case 3:
+            
+            break;
+        default:
+            break;
+    }
     [self.slideMenuController setContentController:contentController animted:YES];
 //    NSLog(@"asdasdasdasdasd");
 }

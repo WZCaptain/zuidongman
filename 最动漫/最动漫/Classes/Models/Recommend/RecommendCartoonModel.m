@@ -12,7 +12,7 @@
 
 - (void)setValue:(id)value forUndefinedKey:(NSString *)key
 {
-    if ([key isEqualToString:@"topic"]) {
+       if ([key isEqualToString:@"topic"]) {
         NSDictionary *dic = value;
         self.title = dic[@"title"];
         self.avatar_url = [dic[@"user"] objectForKey:@"avatar_url"];
@@ -20,5 +20,18 @@
     }
 }
 
+- (void)setValue:(id)value forKey:(NSString *)key
+{
+    [super setValue:value forKey:key];
+    
+    if ([key isEqualToString:@"id"]) {
+        self.ID = [NSString stringWithFormat:@"%@",value];
+    }
+    
+    if ([key isEqualToString:@"title"]) {
+        self.partTitle = value;
+    }
+
+}
 
 @end

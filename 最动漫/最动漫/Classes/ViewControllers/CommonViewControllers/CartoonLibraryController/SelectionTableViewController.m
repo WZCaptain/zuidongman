@@ -10,8 +10,10 @@
 #import "RecommendTableViewCell.h"
 #import "AFNetworking.h"
 #import "MJExtension.h"
+#import "MJRefresh.h"
 #import "RecommendCartoonModel.h"
 #import "KFHeaderView.h"
+#import "KFComicDetailController.h"
 
 @interface SelectionTableViewController ()
 
@@ -36,8 +38,12 @@ static NSString *cellID = @"cell";
 
     [self setupHeaderView];
     
-    // 请求数据
-    [self setupData];
+    // 添加下拉刷新控件
+    [self.tableView addHeaderWithTarget:self action:@selector(setupNewData)];
+    
+    // 自动下拉刷新
+    [self.tableView headerBeginRefreshing];
+
 }
 
 // 设置headerView
@@ -57,12 +63,15 @@ static NSString *cellID = @"cell";
 }
 
 #pragma mark - 请求数据
-- (void)setupData
+- (void)setupNewData
 {
     // 创建请求管理对象
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     // 发送请求
     [manager GET:kHomeURL parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        // 结束上拉刷新
+        [self.tableView headerEndRefreshing];
+        
         NSArray *comicsArray = [responseObject[@"data"] objectForKey:@"comics"];
         for (NSDictionary *dic in comicsArray) {
             RecommendCartoonModel *cartoonModel = [[RecommendCartoonModel alloc]init];
@@ -108,18 +117,10 @@ static NSString *cellID = @"cell";
 // 点击某个cell进入详情
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    KFComicDetailController *comicDetailVC = [[KFComicDetailController alloc]init];
+    [self.navigationController pushViewController:comicDetailVC animated:YES];
 }
 
-
-// 顶部View
-//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
-//{
-//    self.headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.tableView.frame), 44)];
-//    _headerView.backgroundColor = [UIColor purpleColor];
-//    [self.tableView addSubview:_headerView];
-//        return _headerView;
-//}
 
 
 @end

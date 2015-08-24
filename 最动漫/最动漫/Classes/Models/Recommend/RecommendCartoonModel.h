@@ -29,9 +29,9 @@
  */
 @property (copy, nonatomic) NSString *title;
 /**
- *  当前更新的标题
+ *  当前更新标题
  */
-@property (copy, nonatomic) NSString *headline;
+@property (copy, nonatomic) NSString *partTitle;
 /**
  *  用户名
  */
@@ -44,5 +44,9 @@
  *  用户头像url
  */
 @property (copy, nonatomic) NSString *avatar_url;
+/**
+ *  漫画id
+ */
+@property (copy, nonatomic) NSString *ID;
 
 @end
